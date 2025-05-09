@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calcular M²</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Calcular M²</h2>
+    
+    <label>altura (metros) :</label>
+    <input type="number" id="altura" value="">
+    
+    <label>largura (metros) :</label>
+    <input type="number" id="largura" value="">
+    
+    <label>valor do m² (R$) :</label>
+    <input type="number" id="valor" value="0">
+    
+    <label>quantidade :</label>
+    <input type="number" id="quantidade" value="">
+    
+    <button onclick="excluir()">Excluir cálculos</button>
+    <button onclick="calcular()">Calcular</button>
+    
+    <p id="area">Área : 0m²</p>
+    <p id="preco">Preço Total : 0</p>
+  </div>
+  
+  <script src="./js/script.js"></script>
+</body>
+</html>
