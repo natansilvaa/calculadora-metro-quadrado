@@ -6,8 +6,10 @@ body {
 
 .container {
   max-width: 300px;
-  margin: 40px auto;
+  margin: 40px;
   color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 h2 {
@@ -22,6 +24,7 @@ h2 {
     border-radius: 10px;
     width: 300px;
     padding: 40px;
+    
 }
 
 .calculadora h2{
