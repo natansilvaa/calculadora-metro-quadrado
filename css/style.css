@@ -211,3 +211,18 @@ h2 {
     border-radius: 5px;
     color: #172031;
 }
+
+
+p{
+    position: relative;
+    display: inline-block;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    background-color: #ffffff8a;
+    border: 0;
+}
