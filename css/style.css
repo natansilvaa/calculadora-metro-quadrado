@@ -223,6 +223,8 @@ p{
     text-transform: uppercase;
     letter-spacing: 4px;
     font-weight: 700;
-    background-color: #ffffff8a;
     border: 0;
+    background-color: #03e9f4;
+    border-radius: 5px;
+    color: #172031;
 }
