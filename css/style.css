@@ -234,6 +234,9 @@ p{
     color: #172031;
 }
 .form-control button i {
-    
 
+}
+
+#cart-modal{
+    display: none;
 }
