@@ -12,19 +12,19 @@
    <form class="calculadora">
         <h2>Calcular M²</h2>
         <div class="box-input">
-            <input type="text"  name="" required  id="altura">
+            <input type="text"  name="altura" required  id="altura">
             <label >Altura :</label>
         </div>
         <div class="box-input">
-            <input type="text" id="largura" name="" required>
+            <input type="text" id="largura" name="largura" required>
             <label >Largura :</label>
         </div>
         <div class="box-input">
-           <input type="text" id="valor" name="" required>
+           <input type="text" id="valor" name="valor" required>
             <label >Valor do m² :</label>
         </div>
         <div class="box-input">
-           <input type="text" id="quantidade"  name="" required>
+           <input type="text" id="quantidade"  name="quantidade" required>
             <label >Quantidade :</label>
         </div>
         <div>
@@ -35,49 +35,26 @@
                <span></span>
                Calcular 
             </a>
-            <button class="btn-2" onclick="excluir()">Excluir cálculos</button>
+            
+              <button type="button" class="btn-2" onclick="excluir()">Excluir cálculos</button>
+              <button type="button" id="btnAdd" class="btn-add" onclick="adicionarLista()" style="display: none;">Adicionar</button>
         </div>
          
             <p id="area">Área:</p>
             <p id="preco">Preço: </p>
           
-    </form>
-      <button class="btn-lista" onclick="mostrarLista()">Lista</button>
+         <button type="button" class="btn-lista" onclick="mostrarLista()">Lista</button>
 
-    <div class="lista-container" id="listaContainer">
-      <h3>Lista de Cálculos</h3>
-      <div id="listaResultados"></div>
-      <p id="totalGeral">Total Geral: R$ 0,000</p>
-      <button class="btn-whatsapp" onclick="enviarWhatsApp()">Enviar para WhatsApp</button>
-    </div>
-
-
-    
-        <!--  MODAL CART
-        <div class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99]  items-center justify-center hidden" 
-        id="cart-modal"
-        >
+        <div class="lista-container" id="listaContainer">
+            <h3>Lista de Cálculos</h3>
+            <div id="listaResultados"></div>
+            <p id="totalGeral">Total Geral: R$ 0,000</p>
+            <button type="button" class="btn-whatsapp" onclick="enviarWhatsApp()">Enviar para WhatsApp</button>
+            <button type="button" class="btn-voltar" onclick="voltarCalculadora()">Voltar à Calculadora</button>
+        </div>
+</form>
 
 
-
-        MODELO 01 Botão para adicionar à lista 
-          <button type="button" class="btn-2" onclick="adicionarCalculo()">Adicionar à Lista</button>
-
-          Lista de cálculos 
-          <ul id="lista-calculos" style="margin-top: 20px;"></ul>
-
-          Preço total final 
-          <p id="preco-final">Preço Total:</p>
-    
-        </div>-->
-
-     
-    <!-- como fazer para que quando eu fizer o calculo, eu possa ter um botal de adicionar e cria uma lista onde armazenas os calculos para que no final me dê o preço total e tbm crie essa lista com um botao de editar e esxluir em cada item adicionado-->
-
-            
-    <!-- quero que adicionar um botao com o simbolo de + ao lado da do botao excluir dados para que quando um calculo for feito eu possa adicionar a um lista que poderá ser chamda com um botao que voce irar criar no fim da pagina com o nome de lista, assim que o usuário apertar nesse botão abre uma telas com os dados dos caucolos . (exemplo : altura: 0.00 <br> largura: 0.00 <br> preço: e que crie um botao de editar e excluir na extremidade oposta dos dados), no final mostre a soma de todos os preços adicionado na lista e por fim um botao para enviar essa lista para meu whatsApp )-->
-    
-     
   </div>
   
   <script src="./js/script.js"></script>

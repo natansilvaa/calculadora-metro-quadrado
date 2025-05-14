@@ -233,49 +233,39 @@ p{
     border-radius: 5px;
     color: #172031;
 }
-.form-control button i {
 
-}
-
-
-#lista-calculos {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-}
-
-#lista-calculos li {
-  background-color: #1e1e2f;
-  color: #fff;
-  padding: 15px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  position: relative;
-  font-family: Arial, sans-serif;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-#lista-calculos li button {
+.btn-add,
+.btn-lista,
+.btn-voltar,
+.btn-whatsapp {
+  display: inline-block;
+  padding: 12px 20px;
+  color: #03e9f4;
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin-top: 10px;
+  transition: .5s;
   background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 5px 10px;
-  border-radius: 6px;
+  border: 1px solid #03e9f4;
+  border-radius: 5px;
   cursor: pointer;
-  margin-left: 10px;
-  transition: background-color 0.3s, color 0.3s;
 }
 
-#lista-calculos li button:hover {
-  background-color: #fff;
-  color: #1e1e2f;
+.btn-add:hover,
+.btn-lista:hover,
+.btn-voltar:hover,
+.btn-whatsapp:hover {
+  background-color: #03e9f4;
+  color: #172031;
 }
-
-#preco-final {
-  font-weight: bold;
+#listaContainer {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
   margin-top: 20px;
-  color: #1e1e2f;
-  font-size: 1.1rem;
-  padding: 10px;
-  border-top: 1px solid #444;
+  color: #fff;
 }
