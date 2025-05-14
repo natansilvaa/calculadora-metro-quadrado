@@ -12,7 +12,7 @@ function calcular() {
   const precoTotal = area * valor * quantidade;
 
   // Formatar a área com 3 casas decimais
-  document.getElementById('area').innerText = `Área : ${area.toFixed(3   )}m²`;
+  document.getElementById('area').innerText = `Área : ${area.toFixed(3   )}m²`;  
 
   // Formatar o preço total com 3 casas decimais e com a moeda brasileira
   document.getElementById('preco').innerText = `Preço Total : ${precoTotal.toLocaleString('pt-BR', { 
@@ -30,4 +30,9 @@ function excluir() {
   document.getElementById('quantidade').value = '';
   document.getElementById('area').innerText = 'Área : 0m²';
   document.getElementById('preco').innerText = 'Preço Total : R$ 0,00';
+}
+
+
+function adicionarLista(){
+  
 }
