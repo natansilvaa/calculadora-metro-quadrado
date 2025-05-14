@@ -237,6 +237,45 @@ p{
 
 }
 
-#cart-modal{
-    display: none;
+
+#lista-calculos {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#lista-calculos li {
+  background-color: #1e1e2f;
+  color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  position: relative;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#lista-calculos li button {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#lista-calculos li button:hover {
+  background-color: #fff;
+  color: #1e1e2f;
+}
+
+#preco-final {
+  font-weight: bold;
+  margin-top: 20px;
+  color: #1e1e2f;
+  font-size: 1.1rem;
+  padding: 10px;
+  border-top: 1px solid #444;
 }

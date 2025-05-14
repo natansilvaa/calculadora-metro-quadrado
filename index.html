@@ -44,28 +44,19 @@
         <div class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99]  items-center justify-center hidden" 
         id="cart-modal"
         >
+                <!-- Botão para adicionar à lista -->
+        <button type="button" class="btn-2" onclick="adicionarCalculo()">Adicionar à Lista</button>
 
-            <div id="cart-modal">
-                <h2 > lista de orçamentos</h2>
- 
-                <div></div>
+        <!-- Lista de cálculos -->
+        <ul id="lista-calculos" style="margin-top: 20px;"></ul>
 
-                <p >total: <span id="cart-total"></span></p>
-           
-
-                <div >
-                    <button id="close-modal-btn">fechar</button>
-                    <button id="checkout-btn" >finalizar</button>
-                </div>
-
-                
-
-            </div>
-
+        <!-- Preço total final -->
+        <p id="preco-final">Preço Total:</p>
+    
         </div>
 
      <!--FIMMODAL CART -->
-    <!-- MODAL CART -->
+    <!-- como fazer para que quando eu fizer o calculo, eu possa ter um botal de adicionar e cria uma lista onde armazenas os calculos para que no final me dê o preço total e tbm crie essa lista com um botao de editar e esxluir em cada item adicionado-->
     </form>
      
   </div>
