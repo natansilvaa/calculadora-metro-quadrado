@@ -269,3 +269,18 @@ p{
   margin-top: 20px;
   color: #fff;
 }
+.btn-acao {
+  padding: 5px 10px;
+  margin: 1px 5px 10px 0;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #03e9f4;
+  color: #03e9f4;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-acao:hover {
+  background-color: #03e9f4;
+  color: #172031;
+}

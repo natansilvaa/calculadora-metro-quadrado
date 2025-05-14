@@ -15,8 +15,8 @@
     const area = altura * largura;
     const preco = area * valor * quantidade;
 
-    document.getElementById("area").innerText = `Área: ${area.toFixed(2)} m²`;
-    document.getElementById("preco").innerText = `Preço: R$ ${preco.toFixed(2)}`;
+    document.getElementById("area").innerText = `Área: ${area.toFixed(3)} m²`;
+    document.getElementById("preco").innerText = `Preço: R$ ${preco.toFixed(3)}`;
     
     // Mostra o botão adicionar
     document.getElementById("btnAdd").style.display = "inline-block";
@@ -54,12 +54,12 @@
       total += item.preco;
       listaResultados.innerHTML += `
         <div class="item-lista">
-          <p>${index + 1}. Área: ${item.area.toFixed(2)} m² | Preço: R$ ${item.preco.toFixed(2)}</p>
+          <p>${index + 1}. Área: ${item.area.toFixed(3)} m² | Preço: R$ ${item.preco.toFixed(3)}</p>
         </div>
       `;
     });
 
-    totalGeral.innerText = `Total Geral: R$ ${total.toFixed(2)}`;
+    totalGeral.innerText = `Total Geral: R$ ${total.toFixed(3)}`;
   }
 
   function excluir() {
@@ -96,12 +96,63 @@
     let total = 0;
 
     lista.forEach((item, index) => {
-      mensagem += `${index + 1}. Área: ${item.area.toFixed(2)} m² | Preço: R$ ${item.preco.toFixed(2)}\n`;
+      mensagem += `${index + 1}. Área: ${item.area.toFixed(3)} m² | Preço: R$ ${item.preco.toFixed(3)}\n`;
       total += item.preco;
     });
 
-    mensagem += `\nTotal Geral: R$ ${total.toFixed(2)}`;
+    mensagem += `\nTotal Geral: R$ ${total.toFixed(3)}`;
 
     const url = `https://wa.me/5592985228991?text=${123}`;
     window.open(url, "_blank");
   }
+
+  function atualizarLista() {
+  const listaResultados = document.getElementById("listaResultados");
+  const totalGeral = document.getElementById("totalGeral");
+
+  listaResultados.innerHTML = "";
+
+  let total = 0;
+
+  lista.forEach((item, index) => {
+    total += item.preco;
+    listaResultados.innerHTML += `
+      <div class="item-lista">
+        <p>${index + 1}. Área: ${item.area.toFixed(3)} m² | Preço: R$ ${item.preco.toFixed(3)}</p>
+        <button class="btn-acao" onclick="editarItem(${index})">Editar</button>
+        <button class="btn-acao" onclick="excluirItem(${index})">Excluir</button>
+      </div>
+    `;
+  });
+
+  totalGeral.innerText = `Total Geral: R$ ${total.toFixed(3)}`;
+}
+
+function excluirItem(index) {
+  lista.splice(index, 1);
+  atualizarLista();
+}
+
+function editarItem(index) {
+  const item = lista[index];
+
+  // Preenche os campos com os dados anteriores
+  document.getElementById("altura").value = Math.sqrt(item.area).toFixed(2);
+  document.getElementById("largura").value = Math.sqrt(item.area).toFixed(2);
+  document.getElementById("valor").value = (item.preco / item.area).toFixed(2);
+  document.getElementById("quantidade").value = 1;
+
+  // Volta para a calculadora
+  voltarCalculadora();
+
+  // Remove item antigo para atualizar depois
+  lista.splice(index, 1);
+
+  // Mostra botão Adicionar
+  document.getElementById("btnAdd").style.display = "inline-block";
+
+  // Armazena valores temporários novamente
+  document.getElementById("btnAdd").dataset.area = item.area;
+  document.getElementById("btnAdd").dataset.preco = item.preco;
+}
+
