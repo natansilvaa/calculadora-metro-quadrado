@@ -27,31 +27,33 @@
            <input type="text" id="quantidade"  name="quantidade" required>
             <label >Quantidade :</label>
         </div>
-        <div>
-            <a href="#" class="btn"  onclick="calcular()">
-               <span></span>
-               <span></span>
-               <span></span>
-               <span></span>
-               Calcular 
-            </a>
-            
-              <button type="button" class="btn-2" onclick="excluir()">Excluir cálculos</button>
-              <button type="button" id="btnAdd" class="btn-add" onclick="adicionarLista()" style="display: none;">Adicionar</button>
+        <div class="botoes-acao">
+          <a href="#" class="btn" onclick="calcular()">
+            <span></span><span></span><span></span><span></span>
+            Calcular
+          </a>
+
+          <button type="button" class="btn-2" onclick="excluir()">Excluir cálculos</button>
+
+          <button type="button" id="btnAdd" class="btn-add" onclick="adicionarLista()" style="display: none;">Adicionar</button>
         </div>
          
             <p id="area">Área:</p>
             <p id="preco">Preço: </p>
           
-         <button type="button" class="btn-lista" onclick="mostrarLista()">Lista</button>
- </form>
+        <div class="botoes-secundarios">
+              <button type="button" class="btn-lista" onclick="mostrarLista()">Lista</button>
+        </div>
+      </form>
         <div class="lista-container" id="listaContainer">
             <h3>Lista de Cálculos</h3>
             <div id="listaResultados"></div>
             <p id="totalGeral">Total Geral: R$ 0,000</p>
-            <button type="button" class="btn-whatsapp" onclick="enviarWhatsApp()">Enviar para WhatsApp</button>
-            <button type="button" class="btn-voltar" onclick="voltarCalculadora()">Voltar à Calculadora</button>
+        <div class="botoes-lista">
+              <button type="button" class="btn-whatsapp" onclick="enviarWhatsApp()">Enviar para WhatsApp</button>
+              <button type="button" class="btn-voltar" onclick="voltarCalculadora()">Voltar à Calculadora</button>
         </div>
+    </div>
 
 
 
