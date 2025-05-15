@@ -196,21 +196,22 @@ h2 {
 }
 
 .btn-2{
-    position: relative;
-    display: inline-block;
-    padding: 12px 20px;
-    color: #03e9f4;
-    text-decoration: none;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-weight: 700;
-    margin-top: 5px;
-    transition: .5s;
-    overflow: hidden;
-    background-color: transparent;
-    border: 0;
+ display: inline-block;
+  padding: 12px 20px;
+  color: #03e9f4;
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin-top: 10px;
+  transition: .5s;
+  background-color: transparent;
+  border: 1px solid #03e9f4;
+  border-radius: 5px;
+  cursor: pointer;
 }
+
 
 .btn-2:hover{
     background-color: #03e9f4;
@@ -220,7 +221,7 @@ h2 {
 
 
 p{
-  display: inline-block;
+  
   padding: 12px 20px;
   color: #03e9f4;
   text-decoration: none;
