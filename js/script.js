@@ -102,7 +102,7 @@
 
     mensagem += `\nTotal Geral: R$ ${total.toFixed(3)}`;
 
-    const url = `https://wa.me/5592985228991?text=${123}`;
+    const url = `https://wa.me/5592985228991?text=${mensagem}`;
     window.open(url, "_blank");
   }
 
