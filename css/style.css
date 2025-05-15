@@ -220,20 +220,19 @@ h2 {
 
 
 p{
-    position: relative;
-    padding: 12px 20px;
-    color: #333;
-    text-decoration: none;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-weight: 700;
-    border: 0;
+  padding: 12px 20px;
+  margin: 1px 5px 10px 0;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #03e9f4;
+  color: #03e9f4;
+  border-radius: 4px;
+  cursor: pointer;
+}
+P:hover{
     background-color: #03e9f4;
-    border-radius: 5px;
     color: #172031;
 }
-
 .btn-add,
 .btn-lista,
 .btn-voltar,
