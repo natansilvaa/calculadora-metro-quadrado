@@ -54,7 +54,7 @@
       total += item.preco;
       listaResultados.innerHTML += `
         <div class="item-lista">
-          <p>${index + 1}. Área: ${item.area.toFixed(3)} m² | Preço: R$ ${item.preco.toFixed(3)}</p>
+          <p>${index + 1}. Área: ${item.area.toFixed(3)} m² \n Preço: R$ ${item.preco.toFixed(3)}</p>
         </div>
       `;
     });
@@ -96,13 +96,13 @@
     let total = 0;
 
     lista.forEach((item, index) => {
-      mensagem += `${index + 1}. Área: ${item.area.toFixed(3)} m² | Preço: R$ ${item.preco.toFixed(3)}\n`;
+      mensagem += `${index + 1}. Área: ${item.area.toFixed(3)} m²\n Preço: R$ ${item.preco.toFixed(3)}\n`;
       total += item.preco;
     });
 
     mensagem += `\nTotal Geral: R$ ${total.toFixed(3)}`;
 
-    const url = `https://wa.me/5592985228991?text=${mensagem}`;
+    const url = `https://wa.me/5592985228991?text=${encodeURIComponent(mensagem)}`;
     window.open(url, "_blank");
   }
 
@@ -118,7 +118,7 @@
     total += item.preco;
     listaResultados.innerHTML += `
       <div class="item-lista">
-        <p>${index + 1}. Área: ${item.area.toFixed(3)} m² | Preço: R$ ${item.preco.toFixed(3)}</p>
+         <p>${index + 1}.<br> Área: ${item.area.toFixed(3)} m² <br>    Preço: R$ ${item.preco.toFixed(3)}</p>
         <button class="btn-acao" onclick="editarItem(${index})">Editar</button>
         <button class="btn-acao" onclick="excluirItem(${index})">Excluir</button>
       </div>

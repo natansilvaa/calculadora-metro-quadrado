@@ -290,7 +290,12 @@ P:hover{
   border-radius: 10px;
   margin-top: 20px;
   color: #fff;
+  
 }
+#listaResultados p{
+    height: 50px;
+}
+
 .btn-acao {
   padding: 5px 10px;
   margin: 1px 5px 10px 0;
