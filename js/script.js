@@ -118,7 +118,7 @@
     total += item.preco;
     listaResultados.innerHTML += `
       <div class="item-lista">
-         <p>${index + 1}.<br> Área: ${item.area.toFixed(3)} m² <br>    Preço: R$ ${item.preco.toFixed(3)}</p>
+         <p> ${index + 1}. <br>Área: ${item.area.toFixed(3)} m² <br>   Preço: R$ ${item.preco.toFixed(3)}</p>
         <button class="btn-acao" onclick="editarItem(${index})">Editar</button>
         <button class="btn-acao" onclick="excluirItem(${index})">Excluir</button>
       </div>
