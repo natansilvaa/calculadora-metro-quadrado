@@ -96,7 +96,7 @@
     let total = 0;
 
     lista.forEach((item, index) => {
-      mensagem += `${index + 1}. Área: ${item.area.toFixed(3)} m²\n Preço: R$ ${item.preco.toFixed(3)}\n`;
+      mensagem += `${index + 1}. Área: ${item.area.toFixed(3)} m²  Preço: R$ ${item.preco.toFixed(3)}\n`;
       total += item.preco;
     });
 
