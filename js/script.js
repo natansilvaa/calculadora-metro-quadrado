@@ -98,7 +98,7 @@
   lista.forEach((item, index) => {
     mensagem += `📋 *Item ${index + 1}*:\n`; // Item com destaque
     mensagem += `  - Área: *${item.area.toFixed(3)} m²*\n`; // Usando * para destacar valores
-    mensagem += `  - Preço: *R$ ${item.preco.toFixed(2)}*\n\n`; // Preço com 2 casas decimais e destaque
+    mensagem += `  - Preço: *R$ ${item.preco.toFixed(3)}*\n\n`; // Preço com 2 casas decimais e destaque
     total += item.preco;
   });
 
