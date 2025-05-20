@@ -87,24 +87,30 @@
   }
 
   function enviarWhatsApp() {
-    if (lista.length === 0) {
-      alert("A lista está vazia!");
-      return;
-    }
-
-    let mensagem = "Lista de Cálculos:\n";
-    let total = 0;
-
-    lista.forEach((item, index) => {
-      mensagem += `${index + 1}. Área: ${item.area.toFixed(3)} m²  Preço: R$ ${item.preco.toFixed(3)}\n`;
-      total += item.preco;
-    });
-
-    mensagem += `\nTotal Geral: R$ ${total.toFixed(3)}`;
-
-    const url = `https://wa.me/5592985228991?text=${encodeURIComponent(mensagem)}`;
-    window.open(url, "_blank");
+  if (lista.length === 0) {
+    alert("A lista está vazia!");
+    return;
   }
+
+  let mensagem = "🌟 *Lista de Cálculos* 🌟\n\n"; // Título com destaque
+  let total = 0;
+
+  lista.forEach((item, index) => {
+    mensagem += `📋 *Item ${index + 1}*:\n`; // Item com destaque
+    mensagem += `  - Área: *${item.area.toFixed(3)} m²*\n`; // Usando * para destacar valores
+    mensagem += `  - Preço: *R$ ${item.preco.toFixed(2)}*\n\n`; // Preço com 2 casas decimais e destaque
+    total += item.preco;
+  });
+
+  // Adicionando o total com destaque no final
+  mensagem += `================================\n`;
+  mensagem += `💰 *Total Geral: R$ ${total.toFixed(3)}*`;
+
+  // Gerando o link para o WhatsApp com a mensagem codificada
+  const url = `https://wa.me/5592985228991?text=${encodeURIComponent(mensagem)}`;
+  window.open(url, "_blank");
+}
+
 
   function atualizarLista() {
   const listaResultados = document.getElementById("listaResultados");
