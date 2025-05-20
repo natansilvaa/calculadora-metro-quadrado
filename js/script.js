@@ -103,7 +103,7 @@
   });
 
   // Adicionando o total com destaque no final
-  mensagem += `================================\n`;
+  mensagem += `============================\n`;
   mensagem += `💰 *Total Geral: R$ ${total.toFixed(3)}*`;
 
   // Gerando o link para o WhatsApp com a mensagem codificada
