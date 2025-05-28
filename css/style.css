@@ -18,7 +18,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
- background-image: url(../img/WhatsApp\ Image\ 2025-05-28\ at\ 14.47.40.jpeg);
+ 
 }
 
 h2 {
@@ -36,7 +36,8 @@ h2 {
     padding: 40px;
     overflow-y: auto;
     max-height: 90vh; /* Para evitar ultrapassar a tela */
-    
+    background-image: url(../img/WhatsApp\ Image\ 2025-05-28\ at\ 14.47.40.jpeg);
+    background-size: cover;
 }
 
 .calculadora h2{
@@ -291,7 +292,10 @@ P:hover{
   padding: 20px;
   border-radius: 10px;
   margin-top: 20px;
-  color: #fff;
+  color: #000;
+  background-image: url(../img/WhatsApp\ Image\ 2025-05-28\ at\ 14.47.40.jpeg);
+  background-position: right center;
+  background-size: cover;
   
 }
 #listaResultados p{
