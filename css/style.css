@@ -22,9 +22,8 @@ body {
 }
 
 h2 img{
-  width: 100px;
+ width: 100px;
   border-radius: 50%;
-  
 }
 
 .calculadora{
@@ -286,7 +285,7 @@ P:hover{
 }
 #listaContainer {
   display: none;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.26);
   padding: 20px;
   border-radius: 10px;
   margin-top: 20px;
@@ -298,6 +297,13 @@ P:hover{
 }
 #listaResultados p{
     height: 50px;
+}
+
+#listaContainer h2{
+  background-color: #004d66;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
 }
 
 .btn-acao {
