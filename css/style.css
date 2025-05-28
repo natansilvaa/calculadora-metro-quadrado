@@ -290,10 +290,10 @@ P:hover{
   border-radius: 10px;
   margin-top: 20px;
   color: #000;
-  background-image: url(../img/WhatsApp\ Image\ 2025-05-28\ at\ 14.47.40.jpeg);
+  /*background-image: url(../img/ntn.png);
   background-position: right center;
   background-size: cover;
-  
+  */
 }
 #listaResultados p{
     height: 50px;
