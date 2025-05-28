@@ -21,11 +21,10 @@ body {
  
 }
 
-h2 {
-  background-color: #004d66;
-  color: white;
-  padding: 10px;
-  border-radius: 8px;
+h2 img{
+  width: 100px;
+  border-radius: 50%;
+  
 }
 
 .calculadora{
