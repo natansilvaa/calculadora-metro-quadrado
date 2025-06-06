@@ -68,3 +68,27 @@ function atualizarLista() {
 
   totalGeral.innerText = `Total Geral: R$ ${total.toFixed(3)}`;
 }
+
+
+function excluir() {
+  document.getElementById("descrição").value = "";
+  document.getElementById("altura").value = "";
+  document.getElementById("largura").value = "";
+  document.getElementById("valor").value = "";
+  document.getElementById("quantidade").value = "";
+
+  document.getElementById("area").innerText = "Área:";
+  document.getElementById("preco").innerText = "Preço:";
+  document.getElementById("btnAdd").style.display = "none";
+}
+
+function mostrarLista() {
+  document.getElementById("listaContainer").style.display = "block";
+  document.querySelector(".calculadora").style.display = "none";
+  atualizarLista();
+}
+
+function voltarCalculadora() {
+  document.getElementById("listaContainer").style.display = "none";
+  document.querySelector(".calculadora").style.display = "block";
+}
