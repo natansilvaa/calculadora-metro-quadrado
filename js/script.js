@@ -81,14 +81,3 @@ function excluir() {
   document.getElementById("preco").innerText = "Preço:";
   document.getElementById("btnAdd").style.display = "none";
 }
-
-function mostrarLista() {
-  document.getElementById("listaContainer").style.display = "block";
-  document.querySelector(".calculadora").style.display = "none";
-  atualizarLista();
-}
-
-function voltarCalculadora() {
-  document.getElementById("listaContainer").style.display = "none";
-  document.querySelector(".calculadora").style.display = "block";
-}
