@@ -119,3 +119,32 @@ function enviarWhatsApp() {
   const url = `https://wa.me/5592985228991?text=${encodeURIComponent(mensagem)}`;
   window.open(url, "_blank");
 }
+
+function excluirItem(index) {
+  lista.splice(index, 1);
+  atualizarLista();
+}
+
+function editarItem(index) {
+  const item = lista[index];
+
+  // Preenche os campos com os dados do item
+  const lado = Math.sqrt(item.area);
+  document.getElementById("descrição").value = item.descricao;
+  document.getElementById("altura").value = lado.toFixed(2);
+  document.getElementById("largura").value = lado.toFixed(2);
+  document.getElementById("valor").value = (item.preco / item.area).toFixed(2);
+  document.getElementById("quantidade").value = 1;
+
+  voltarCalculadora();
+
+  // Remove o item da lista temporariamente
+  lista.splice(index, 1);
+
+  // Mostra botão Adicionar com os valores armazenados
+  const btnAdd = document.getElementById("btnAdd");
+  btnAdd.style.display = "inline-block";
+  btnAdd.dataset.area = item.area;
+  btnAdd.dataset.preco = item.preco;
+  btnAdd.dataset.descricao = item.descricao;
+}
