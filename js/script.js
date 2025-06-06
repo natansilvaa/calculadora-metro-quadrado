@@ -27,6 +27,7 @@ function calcular() {
   btnAdd.dataset.descricao = descricao;
 }
 
+
 function adicionarLista() {
   const area = parseFloat(document.getElementById("btnAdd").dataset.area);
   const preco = parseFloat(document.getElementById("btnAdd").dataset.preco);
@@ -42,6 +43,7 @@ function adicionarLista() {
   document.getElementById("area").innerText = "Área:";
   document.getElementById("preco").innerText = "Preço:";
 }
+
 
 function atualizarLista() {
   const listaResultados = document.getElementById("listaResultados");
@@ -65,79 +67,4 @@ function atualizarLista() {
   });
 
   totalGeral.innerText = `Total Geral: R$ ${total.toFixed(3)}`;
-}
-
-function excluir() {
-  document.getElementById("descrição").value = "";
-  document.getElementById("altura").value = "";
-  document.getElementById("largura").value = "";
-  document.getElementById("valor").value = "";
-  document.getElementById("quantidade").value = "";
-
-  document.getElementById("area").innerText = "Área:";
-  document.getElementById("preco").innerText = "Preço:";
-  document.getElementById("btnAdd").style.display = "none";
-}
-
-function mostrarLista() {
-  document.getElementById("listaContainer").style.display = "block";
-  document.querySelector(".calculadora").style.display = "none";
-  atualizarLista();
-}
-
-function voltarCalculadora() {
-  document.getElementById("listaContainer").style.display = "none";
-  document.querySelector(".calculadora").style.display = "block";
-}
-
-function enviarWhatsApp() {
-  if (lista.length === 0) {
-    alert("A lista está vazia!");
-    return;
-  }
-
-  let mensagem = "🌟 *Lista de Cálculos* 🌟\n\n";
-  let total = 0;
-
-  lista.forEach((item, index) => {
-    mensagem += `📋 *Item ${index + 1}* - ${item.descricao}:\n`;
-    mensagem += `  - Área: *${item.area.toFixed(3)} m²*\n`;
-    mensagem += `  - Preço: *R$ ${item.preco.toFixed(3)}*\n\n`;
-    total += item.preco;
-  });
-
-  mensagem += `==========================\n`;
-  mensagem += `💰 *Total Geral: R$ ${total.toFixed(3)}*`;
-
-  const url = `https://wa.me/5592985228991?text=${encodeURIComponent(mensagem)}`;
-  window.open(url, "_blank");
-}
-
-function excluirItem(index) {
-  lista.splice(index, 1);
-  atualizarLista();
-}
-
-function editarItem(index) {
-  const item = lista[index];
-
-  // Preenche os campos com os dados do item
-  const lado = Math.sqrt(item.area);
-  document.getElementById("descrição").value = item.descricao;
-  document.getElementById("altura").value = lado.toFixed(2);
-  document.getElementById("largura").value = lado.toFixed(2);
-  document.getElementById("valor").value = (item.preco / item.area).toFixed(2);
-  document.getElementById("quantidade").value = 1;
-
-  voltarCalculadora();
-
-  // Remove o item da lista temporariamente
-  lista.splice(index, 1);
-
-  // Mostra botão Adicionar com os valores armazenados
-  const btnAdd = document.getElementById("btnAdd");
-  btnAdd.style.display = "inline-block";
-  btnAdd.dataset.area = item.area;
-  btnAdd.dataset.preco = item.preco;
-  btnAdd.dataset.descricao = item.descricao;
 }
