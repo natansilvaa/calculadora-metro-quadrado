@@ -88,3 +88,34 @@ function mostrarLista() {
   document.querySelector(".calculadora").style.display = "none";
   atualizarLista();
 }
+
+
+
+function voltarCalculadora() {
+  document.getElementById("listaContainer").style.display = "none";
+  document.querySelector(".calculadora").style.display = "block";
+}
+
+
+function enviarWhatsApp() {
+  if (lista.length === 0) {
+    alert("A lista está vazia!");
+    return;
+  }
+
+  let mensagem = "🌟 *Lista de Cálculos* 🌟\n\n";
+  let total = 0;
+
+  lista.forEach((item, index) => {
+    mensagem += `📋 *Item ${index + 1}* - ${item.descricao}:\n`;
+    mensagem += `  - Área: *${item.area.toFixed(3)} m²*\n`;
+    mensagem += `  - Preço: *R$ ${item.preco.toFixed(3)}*\n\n`;
+    total += item.preco;
+  });
+
+  mensagem += `==========================\n`;
+  mensagem += `💰 *Total Geral: R$ ${total.toFixed(3)}*`;
+
+  const url = `https://wa.me/5592985228991?text=${encodeURIComponent(mensagem)}`;
+  window.open(url, "_blank");
+}
