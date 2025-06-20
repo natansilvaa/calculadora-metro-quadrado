@@ -46,18 +46,19 @@ function adicionarLista() {
   updateCartModal();
 
     // ✅ Mostrar toast de item adicionado
-    Toastify({
-        text: `${descricao} adicionado ao carrinho!`,
-        duration: 1500,
-        close: true,
-        gravity: "top",
-        position: "right",
-        stopOnFocus: true,
-        style: {
-        background: "#22c55e", // verde
-        },
-    }).showToast();
+     Toastify({
+    text: `${descricao} adicionado ao carrinho!`,
+    duration: 1500,
+    close: true,
+    gravity: "top",
+    position: "right",
+    stopOnFocus: true,
+    style: {
+      background: "#22c55e", // verde
+    },
+  }).showToast();
 }
+
 
 
 function atualizarLista() {
