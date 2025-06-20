@@ -43,7 +43,7 @@ function adicionarLista() {
   document.getElementById("area").innerText = "Área:";
   document.getElementById("preco").innerText = "Preço:";
 
- 
+}
 
 
 function atualizarLista() {
